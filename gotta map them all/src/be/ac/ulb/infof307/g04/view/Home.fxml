@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" prefHeight="720.0" prefWidth="1080.0" stylesheets="/be/ac/ulb/infof307/g04/view/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.controller.HomeController">
+   <left>
+      <VBox fx:id="sidebar" alignment="TOP_CENTER" prefHeight="720.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" styleClass="menu">
+               <children>
+               		<ImageView fx:id="logo" fitHeight="64" fitWidth="64" pickOnBounds="true" preserveRatio="false" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" styleClass="menu">
+               <children>
+                  <ImageView fx:id="search" fitHeight="64" fitWidth="64" pickOnBounds="true" preserveRatio="false" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" styleClass="menu">
+               <children>
+               		<ImageView fx:id="logIn" fitHeight="64" fitWidth="64" pickOnBounds="true" preserveRatio="false" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" styleClass="menu">
+               <children>
+               		<ImageView fx:id="signUp" fitHeight="64" fitWidth="64" pickOnBounds="true" preserveRatio="false" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" styleClass="menu">
+               <children>
+               		<ImageView fx:id="profile" fitHeight="64" fitWidth="64" pickOnBounds="true" preserveRatio="false" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" styleClass="menu">
+               <children>
+               		<ImageView fx:id="logOut" fitHeight="64" fitWidth="64" pickOnBounds="true" preserveRatio="false" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+   		<!-- <fx:include fx:id="embeddedRedView" source="/be/ac/ulb/infof307/g04/view/Login.fxml" />-->
+   </center>
+   <right>
+      <VBox fx:id="searchPanel" alignment="TOP_CENTER" prefHeight="720.0" prefWidth="369.0" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <Label fx:id="searchLabel" text="Rechercher">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin></Label>
+            <HBox alignment="CENTER">
+               <children>
+                  <ComboBox fx:id="searchPokemonName" prefWidth="150.0" promptText="Nom du pokémon">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label text="OU" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="searchPokemonType" prefWidth="150.0" promptText="Type du pokémon">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <Label prefHeight="17.0" prefWidth="380.0" text="Marqueurs correspondants (cliquez pour centrer sur la carte)" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <ScrollPane fx:id="markersScrollPane" fitToWidth="true" maxHeight="250.0" prefHeight="250.0" prefWidth="349.0">
+              <content>
+                  <VBox prefWidth="347.0" />
+              </content>
+            </ScrollPane>
+            <Label prefHeight="17.0" prefWidth="380.0" text="Historique (cliquez pour charger une sauvegarde)" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <ScrollPane fx:id="searchesScrollPane" maxHeight="250.0" prefHeight="250.0" prefWidth="349.0">
+              <content>
+                  <VBox prefWidth="347.0" />
+              </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="349.0">
+               <children>
+                  <Button fx:id="saveSearch" mnemonicParsing="false" styleClass="btn" text="Sauvegarder la recherche">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="helpSearch" minWidth="150.0" mnemonicParsing="false" styleClass="btnGris" text="Aide">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </right>
+</BorderPane>

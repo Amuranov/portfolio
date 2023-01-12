@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="containerLogin" stylesheets="/be/ac/ulb/infof307/g04/view/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.controller.LoginController">
+   <children>
+      <StackPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label fx:id="loginText" text="Identifiez-vous !" />
+                  <HBox alignment="CENTER" prefHeight="200.0" prefWidth="566.0">
+                     <children>
+                        <ImageView fx:id="profilePicture" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="42.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="37.0" prefWidth="566.0">
+                     <children>
+                        <ImageView fx:id="usernameIcon" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin></ImageView>
+                        <TextField fx:id="username" promptText="Username">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="566.0">
+                     <children>
+                        <ImageView fx:id="passwordIcon" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin></ImageView>
+                        <PasswordField fx:id="password" promptText="Password">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></PasswordField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="566.0">
+                     <children>
+                        <Button fx:id="buttonLogIn" minWidth="150.0" mnemonicParsing="false" onAction="#onLogin" text="Se connecter">
+                           <HBox.margin>
+                              <Insets left="42.0" />
+                           </HBox.margin></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

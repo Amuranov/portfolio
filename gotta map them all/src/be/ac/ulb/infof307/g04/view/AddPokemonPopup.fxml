@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="popupContainer" prefHeight="446.0" prefWidth="238.0" style="-fx-border-color: #e74c3c; -fx-border-width: 2;" stylesheets="/be/ac/ulb/infof307/g04/view/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.controller.AddPokemonPopupController">
+   <children>
+      <DatePicker fx:id="datePokemon" layoutX="59.0" layoutY="86.0"  prefHeight="25.0" prefWidth="231.0" promptText="18/02/2017" showWeekNumbers="true" />
+      <ComboBox fx:id="selectPokemon" layoutX="59.0" layoutY="121.0" prefHeight="25.0" prefWidth="231.0" promptText="Nom du pokémon" />
+      <ImageView fx:id="calIcon"  fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="pkmnIcon" fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="addPokemon" layoutX="190.0" layoutY="372.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="btn" text="Ajouter" />
+      <Button fx:id="closePopup" layoutX="17.0"  layoutY="372.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="btnGris" text="Fermer" />
+      <VBox fx:id="bar" alignment="CENTER" prefHeight="25.0" prefWidth="306.0" AnchorPane.leftAnchor="0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="19.0" prefWidth="304.0" text="Localisation du pokémon" textAlignment="CENTER" textFill="WHITE">
+               <font><Font name="System Bold" size="13.0" /></font>
+            </Label>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="2.0" layoutY="161.0" prefHeight="180.0" style="-fx-background-color: #34495e;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+         <children>
+            <VBox alignment="CENTER_LEFT" layoutX="168.0" layoutY="7.0" prefHeight="132.0" prefWidth="128.0">
+               <children>
+                  <Label fx:id="lifeLabel" text="PV" textFill="WHITE" />
+                  <ProgressBar fx:id="life" prefHeight="18.0" prefWidth="129.0" />
+                  <Label fx:id="attackLabel" text="ATK" textFill="WHITE" />
+                  <ProgressBar fx:id="attack" prefHeight="18.0" prefWidth="128.0" />
+                  <Label fx:id="defenseLabel" text="DEF" textFill="WHITE" />
+                  <ProgressBar fx:id="defense" prefHeight="18.0" prefWidth="129.0" />
+               </children>
+            </VBox>
+            <Label fx:id="type2" alignment="CENTER" contentDisplay="CENTER" layoutX="237.0" layoutY="140.0" prefHeight="17.0" prefWidth="59.0" textFill="WHITE" />
+            <Label fx:id="type1" alignment="CENTER" contentDisplay="CENTER" layoutX="168.0" layoutY="140.0" prefHeight="17.0" prefWidth="59.0" textFill="WHITE" />
+            <Label fx:id="nameSelectedPokemon" alignment="CENTER" layoutX="14.0" layoutY="146.0" prefHeight="20.0" prefWidth="128.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 20;" text="Nom pokémon" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgSelectedPokemon" fitHeight="128.0" fitWidth="128.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="hour" layoutX="59.0" layoutY="49.0" prefHeight="25.0" prefWidth="231.0" promptText="08:00:00" />
+      <ImageView fx:id="hourIcon" fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+	<padding>
+		<Insets bottom="0" left="0" right="0" top="0" />
+	</padding>
+
+</AnchorPane>

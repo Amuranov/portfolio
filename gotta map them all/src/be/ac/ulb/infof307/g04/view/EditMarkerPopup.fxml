@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="popupContainer" minWidth="-Infinity" prefHeight="357.0" prefWidth="356.0" style="-fx-border-color: #e74c3c; -fx-border-width: 2;" stylesheets="/be/ac/ulb/infof307/g04/view/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ac.ulb.infof307.g04.controller.EditMarkerPopupController">
+   <children>
+      <Button fx:id="submitButton" layoutX="236.0" layoutY="314.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="btn" text="Appliquer" />
+      <Button fx:id="closeButton" layoutX="24.0" layoutY="314.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="btnGris" text="Fermer" />
+      <VBox fx:id="bar" alignment="CENTER" prefHeight="25.0" prefWidth="306.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="356.0" text="Modification de la signalisation" textAlignment="CENTER" textFill="WHITE">
+               <font><Font name="System Bold" size="13.0" /></font>
+            </Label>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="1.0" layoutY="92.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="197.0" prefWidth="328.0" style="-fx-background-color: #34495e;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" layoutX="168.0" layoutY="7.0" prefHeight="132.0" prefWidth="128.0">
+               <children>
+                  <Label fx:id="lifeLabel" text="PV" textFill="WHITE" />
+                  <ProgressBar fx:id="lifeProgressBar" prefHeight="18.0" prefWidth="129.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin></ProgressBar>
+                  <Slider fx:id="lifeSlider">
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Slider>
+                  <Label fx:id="attackLabel" text="ATK" textFill="WHITE" />
+                  <ProgressBar fx:id="attackProgressBar" prefHeight="18.0" prefWidth="128.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin></ProgressBar>
+                  <Slider fx:id="attSlider">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Slider>
+                  <Label fx:id="defenseLabel" text="DEF" textFill="WHITE" />
+                  <ProgressBar fx:id="defenseProgressBar" prefHeight="18.0" prefWidth="129.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin></ProgressBar>
+                  <Slider fx:id="defSlider" />
+               </children>
+            </VBox>
+            <Label fx:id="nameSelectedPokemon" alignment="CENTER" layoutX="14.0" layoutY="146.0" prefHeight="20.0" prefWidth="128.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 20;" text="Nom pokémon" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgSelectedPokemon" fitHeight="128.0" fitWidth="128.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      </ImageView>
+            <TextField fx:id="lifeValue" editable="false" layoutX="303.0" layoutY="20.0" prefHeight="25.0" prefWidth="44.0" />
+            <TextField fx:id="attValue" editable="false" layoutX="303.0" layoutY="81.0" prefHeight="25.0" prefWidth="44.0" />
+            <TextField fx:id="defValue" editable="false" layoutX="303.0" layoutY="142.0" prefHeight="25.0" prefWidth="44.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="addTime" layoutX="30.0" layoutY="55.0" />
+      <Label fx:id="addDate" layoutX="30.0" layoutY="92.0" />
+   </children>
+	<padding>
+		<Insets bottom="0" left="0" right="0" top="0" />                 
+	</padding>
+
+</AnchorPane>
