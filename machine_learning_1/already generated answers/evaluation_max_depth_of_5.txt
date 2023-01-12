@@ -1,0 +1,19 @@
+Training set evaluation:[[4755  297]
+ [ 733  886]]
+             precision    recall  f1-score   support
+
+      <=50K       0.87      0.94      0.90      5052
+       >50K       0.75      0.55      0.63      1619
+
+avg / total       0.84      0.85      0.84      6671
+Training set error: 0.154399640234
+
+Test set Evaluation:[[2016  125]
+ [ 326  392]]
+             precision    recall  f1-score   support
+
+      <=50K       0.86      0.94      0.90      2141
+       >50K       0.76      0.55      0.63       718
+
+avg / total       0.84      0.84      0.83      2859
+Test set Error: 0.157747464148
